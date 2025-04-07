@@ -8,8 +8,8 @@ public class Director {
         this.builder = builder;
     }
 
-    public String getDate(int y, int m, int d) {
-        builder.buildDate(y, m, d);
+    public String getDate(int year, int month, int day) {
+        builder.buildDate(year, month, day);
         return builder.date();
     }
 }
