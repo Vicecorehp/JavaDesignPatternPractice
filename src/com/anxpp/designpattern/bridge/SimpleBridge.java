@@ -2,31 +2,31 @@ package com.anxpp.designpattern.bridge;
 
 //桥接模式
 public class SimpleBridge {
-    public static void main(String args[]) {
-        new LenevoComputer(new Amd()).discribe();
-        new HaseeComputer(new Intel()).discribe();
+    public static void main(String[] args) {
+        new LenovoComputer(new Amd()).describe();
+        new HaseeComputer(new Intel()).describe();
     }
 }
 
-//实现者
+// 实现者
 interface Cpu {
-    String discribe();
+    String describe();
 }
 
-//具体实现者*2
+// 具体实现者*2
 class Amd implements Cpu {
-    public String discribe() {
-        return "just so so...";
+    public String describe() {
+        return "AMD YES!";
     }
 }
 
 class Intel implements Cpu {
-    public String discribe() {
-        return "great !";
+    public String describe() {
+        return "INTEL LUNAR LAKE!";
     }
 }
 
-//抽象
+// 抽象
 abstract class AbstractComputer {
     Cpu cpu;
 
@@ -34,19 +34,19 @@ abstract class AbstractComputer {
         this.cpu = cpu;
     }
 
-    public abstract void discribe();
+    public abstract void describe();
 
 }
 
-//细化抽象*2
-class LenevoComputer extends AbstractComputer {
-    public LenevoComputer(Cpu cpu) {
+// 细化抽象*2
+class LenovoComputer extends AbstractComputer {
+    public LenovoComputer(Cpu cpu) {
         super(cpu);
     }
 
     @Override
-    public void discribe() {
-        System.out.println("联想笔记本cpu:" + super.cpu.discribe());
+    public void describe() {
+        System.out.println("联想笔记本cpu:" + super.cpu.describe());
     }
 }
 
@@ -56,7 +56,7 @@ class HaseeComputer extends AbstractComputer {
     }
 
     @Override
-    public void discribe() {
-        System.out.println("神舟笔记本cpu:" + super.cpu.discribe());
+    public void describe() {
+        System.out.println("神舟笔记本cpu:" + super.cpu.describe());
     }
 }
