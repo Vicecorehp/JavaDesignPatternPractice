@@ -5,10 +5,10 @@ import java.util.Vector;
 
 //被适配者
 public class Book {
-    private Vector<String> books;
+    private final Vector<String> books;
 
     public Book() {
-        books = new Vector<String>();
+        books = new Vector<>();
     }
 
     public void add(String book) {
