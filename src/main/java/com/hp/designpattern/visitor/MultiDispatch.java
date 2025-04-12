@@ -1,10 +1,10 @@
 package com.hp.designpattern.visitor;
 
 public class MultiDispatch {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Father child = new Child();
         child.print();
-        new Child().print(new Vistor());
+        new Child().print(new VisitorInner());
     }
 }
 
@@ -16,15 +16,15 @@ class Father {
 
 class Child extends Father {
     void print() {
-        System.out.print("子类");
+        System.out.println("子类");
     }
 
-    void print(Vistor c) {
+    void print(VisitorInner c) {
         c.print(this);
     }
 }
 
-class Vistor {
+class VisitorInner {
     public void print(Child child) {
         child.print();
     }

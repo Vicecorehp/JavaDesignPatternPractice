@@ -1,7 +1,7 @@
 package com.hp.designpattern.visitor;
 
 //具体访问者
-public class APPOwner implements Visitor {
+public class AppOwner implements Visitor {
     @Override
     public void visit(UserVIP user) {
         String estimation = user.getEstimation();

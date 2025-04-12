@@ -1,6 +1,6 @@
 package com.hp.designpattern.visitor;
 
-//VIP用户，具体元素
+// VIP用户，具体元素
 public class UserVIP implements User {
     String estimation;
 

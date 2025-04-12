@@ -1,6 +1,6 @@
 package com.hp.designpattern.visitor;
 
-//普通用户，具体元素
+// 普通用户，具体元素
 public class UserOrdinary implements User {
     String estimation;
 

@@ -1,6 +1,6 @@
 package com.hp.designpattern.visitor;
 
-//抽象访问者
+// 抽象访问者
 public interface Visitor {
     void visit(UserVIP user);
 
